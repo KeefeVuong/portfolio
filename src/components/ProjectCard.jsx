@@ -27,7 +27,7 @@ const ProjectCard = ({title, description, language, img}) => {
                 <Typography gutterBottom variant="h5" component="div">
                     {title}
                 </Typography>
-                <Typography variant="subtitle">
+                <Typography variant="subtitle2">
                     {language}
                 </Typography>
                 </Box>
