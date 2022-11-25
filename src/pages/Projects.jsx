@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectCard from "../components/ProjectCard"
 import { Typography, Box } from "@mui/material"
+import Carousel from 'react-material-ui-carousel'
 
 const titleStyle = {
     textAlign: "center"
@@ -13,6 +14,17 @@ const projectsBoxStyle = {
     marginTop: "20px",
     flexWrap: "wrap",
     gap: "20px"
+}
+
+const carouselStyle = {
+    textAlign: "center",
+    minWidth: 345,
+    maxWidth: 500,
+    height: "325px",
+    position: 'absolute', 
+    left: '50%', 
+    top: '50%',
+    transform: 'translate(-50%, -50%)'
 }
 
 const projects = [
@@ -56,6 +68,24 @@ const Projects = () => {
                 )
             })}
         </Box>
+
+{/* 
+        <Carousel
+        autoPlay={false}
+        sx={carouselStyle}
+        >
+            {projects.map((project, index) => {
+                return (
+                    <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    language={project.language}
+                    img={project.img}
+                    key={index}
+                    />
+                )
+            })}
+        </Carousel> */}
         </>
     )
 }

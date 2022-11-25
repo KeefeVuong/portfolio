@@ -14,11 +14,11 @@ const ProjectCard = ({title, description, language, img}) => {
     }   
 
     return (
-        <Card sx={{ minWidth: 345 }} onClick={handleClick}>
+        <Card sx={{ minWidth: 345, maxWidth: 500}} onClick={handleClick}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="140"
+              height="200px"
               image={img}
               alt="green iguana"
             />
