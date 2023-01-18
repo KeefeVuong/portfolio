@@ -1,14 +1,27 @@
 import { React, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Typography, Container, Rating, Button, Popover, Box, Divider, Chip } from '@mui/material';
+import { Typography, Container, Rating, Button, Popover, Box, Divider, Chip, Paper } from '@mui/material';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import Carousel from 'react-material-ui-carousel'
+import { createTheme, ThemeProvider } from '@mui/material';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import FolderIcon from '@mui/icons-material/Folder';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Open Sans',
+    ].join(','),
+  },});
 
 const carouselStyle = {
     textAlign: "center",
-    border: "1px solid black",
     marginTop: "5px",
-    marginBottom: "25px"
+    marginBottom: "25px",
 }
 
 const testData = [
@@ -18,60 +31,54 @@ const testData = [
 
 const Project = () => {
     const params = useParams();
-    const [anchorEl, setAnchorEl] = useState(null);
-
-    const handlePopoverOpen = (event) => {
-        setAnchorEl(event.currentTarget);
-    }
-
-    const handlePopoverClose = () => {
-        setAnchorEl(null);
-    }
 
     return (
         <>
-        <Typography variant="h3">
-            {params.projectName}
-        </Typography>
-        <Button variant="outlined" onClick={handlePopoverOpen}>
-            <BarChartIcon/> View Ratings
-        </Button>
-        <Popover
-        open={anchorEl === null ? false : true}
-        anchorEl={anchorEl}
-        onClose={handlePopoverClose}
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
-        }}
-      >
-        <Box sx={{display: "flex", alignItems: "center", gap: "5px"}}>
-            <Typography>
-                Difficulty:
+        <ThemeProvider theme={theme}>
+            <Typography variant="h3">
+                <strong>{params.projectName}</strong>
             </Typography>
-            <Rating readOnly value={3} size="small"></Rating>
-        </Box>
-        <Box sx={{display: "flex", alignItems: "center", gap: "5px"}}>
-            <Typography>
-                Enjoyment:
+            <Divider/>
+            <Carousel
+            autoPlay={false}
+            sx={carouselStyle}
+            cycleNavigation={true}
+            navButtonsAlwaysVisible={true}
+            >
+                {testData.map((data, i) => {
+                    return <img src={data} key={i}/>
+                })}
+            </Carousel>
+            <Divider>
+                <Chip color="primary" label="Click here to find out more" onClick={() => {window.scrollTo(0, 500)}}/>
+            </Divider> 
+            <Typography variant="h3">
+                <strong>Features</strong>
             </Typography>
-            <Rating readOnly value={4} size="small"></Rating>
-        </Box>
-        </Popover>
-        <hr/>
-        <Carousel
-        height="60vh"
-        autoPlay={true}
-        sx={carouselStyle}
-        >
-            {testData.map((data) => {
-                return <img src={data} height="100%" width="100%"/>
-            })}
-        </Carousel>
-        <Divider>
-            <Chip color="primary" label="Click here to find out more" onClick={() => {window.scrollTo(0, 500)}}/>
-        </Divider> 
-        
+                <Box sx={{display: "flex", flexDirection:"column", height: "50px", flexWrap: "wrap", width: "500px"}}>
+                    <Paper>
+                    <ListItem divider={true}>
+                        <ListItemIcon>
+                        <FolderIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                        primary="Single-line item"
+                        />
+                    </ListItem>
+                    </Paper>
+                    <Paper>
+                    <ListItem>
+                        <ListItemIcon>
+                        <FolderIcon />
+                        </ListItemIcon>
+                        <ListItemText
+                        primary="Single-line item"
+                        />
+                    </ListItem>
+                    </Paper>
+            </Box>
+
+        </ThemeProvider>
         </>
     )
 }

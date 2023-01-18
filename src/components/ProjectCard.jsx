@@ -2,11 +2,11 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Rating } from '@mui/material';
 import { CardActionArea } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 
-const ProjectCard = ({title, description, language, img}) => {
+const ProjectCard = ({title, completed, language, img, rating}) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -14,7 +14,7 @@ const ProjectCard = ({title, description, language, img}) => {
     }   
 
     return (
-        <Card sx={{ minWidth: 345, maxWidth: 500}} onClick={handleClick}>
+        <Card sx={{ width: 345, height: 290}} onClick={handleClick}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -23,17 +23,24 @@ const ProjectCard = ({title, description, language, img}) => {
               alt="green iguana"
             />
             <CardContent>
-                <Box sx={{display: "flex", justifyContent: "space-between"}}>
+              <Box sx={{display: "flex", justifyContent: "space-between"}}>
                 <Typography gutterBottom variant="h5" component="div">
                     {title}
                 </Typography>
                 <Typography variant="subtitle2">
                     {language}
                 </Typography>
-                </Box>
-              <Typography variant="body2" color="text.secondary">
-                {description}
-              </Typography>
+              </Box>
+              <Box sx={{display: "flex", justifyContent: "space-between"}}>
+                <Rating readOnly value={rating} size="small"></Rating>
+                {completed ?  
+                <Typography variant="body2" color="text.secondary">
+                  COMPLETED
+                </Typography> : 
+                <Typography variant="body2" color="text.secondary">
+                  INCOMPLETE
+                </Typography>}
+              </Box>
             </CardContent>
           </CardActionArea>
         </Card>

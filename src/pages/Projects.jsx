@@ -30,21 +30,24 @@ const carouselStyle = {
 const projects = [
     {
         "title": "Discord Bot",
-        "description": "Pretty cool bot",
+        "completed": true,
         "language": "Python",
-        "img": "https://droplr.com/wp-content/uploads/2020/10/Discord-music-e1635364775454.png"
+        "img": "https://droplr.com/wp-content/uploads/2020/10/Discord-music-e1635364775454.png",
+        "rating": 4
     },
     {
         "title": "Hangman Game",
-        "description": "Hang ppl",
+        "completed": true,
         "language": "ReactJS",
-        "img": "https://store-images.s-microsoft.com/image/apps.31378.14440169033196048.33ec04e1-f2d4-46ed-a05b-03b332738f93.8032cfe7-683a-4be1-8b4c-9da7dc14c2b3?q=90&w=480&h=270"
+        "img": "https://store-images.s-microsoft.com/image/apps.31378.14440169033196048.33ec04e1-f2d4-46ed-a05b-03b332738f93.8032cfe7-683a-4be1-8b4c-9da7dc14c2b3?q=90&w=480&h=270",
+        "rating": 5
     },
     {
         "title": "Reminders Application",
-        "description": "Reminds peeps",
+        "completed": true,
         "language": "Python",
-        "img": "https://previews.123rf.com/images/burdun/burdun2005/burdun200501262/148029451-dont-forget-reminder-on-sticker-with-white-alarm-clock-aside-on-yellow-background.jpg"
+        "img": "https://previews.123rf.com/images/burdun/burdun2005/burdun200501262/148029451-dont-forget-reminder-on-sticker-with-white-alarm-clock-aside-on-yellow-background.jpg",
+        "rating": 4
     }
 ]
 
@@ -60,10 +63,11 @@ const Projects = () => {
                 return (
                     <ProjectCard
                     title={project.title}
-                    description={project.description}
+                    completed={project.completed}
                     language={project.language}
                     img={project.img}
                     key={index}
+                    rating={project.rating}
                     />
                 )
             })}
