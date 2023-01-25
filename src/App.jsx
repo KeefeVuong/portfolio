@@ -15,7 +15,7 @@ import Project from "./pages/Project"
 function App() {
 
   return (
-    <div className="App" style={{background: "#e7ebf0"}}>
+    <div className="App" style={{backgroundColor: "#e7ebf0", minHeight:"100vh"}}>
         <Router>
         <NavBar/>
         <Routes>
