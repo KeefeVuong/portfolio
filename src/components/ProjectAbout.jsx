@@ -22,6 +22,11 @@ const aboutData = {
             A detailed list of commands and their resulting actions are listed in the <strong>Features</strong> section.
             </Typography>
         </>
+    ],
+    "Hangman Game": [
+        <>
+        <Typography>Hello</Typography>
+        </>
     ]
 }
 
@@ -30,7 +35,10 @@ function ProjectAbout({projectName}) {
   return (
     <Paper sx={{margin: "0px 2.5%"}}>
     {aboutData[projectName].map((data, i) => {
-        return data
+        return (
+            <div key={"projectAbout" + i}>{data}</div>
+        )
+    
     })}
     </Paper>
   )
