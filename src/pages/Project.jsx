@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Typography, Container, Rating, Button, Popover, Box, Divider, Chip, Paper } from '@mui/material';
+import { Typography, Container, Rating, Button, Popover, Box, Divider, Chip, Paper, IconButton} from '@mui/material';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import Carousel from 'react-material-ui-carousel'
 import { createTheme, ThemeProvider } from '@mui/material';
@@ -16,6 +16,9 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ProjectAbout from '../components/ProjectAbout';
+import GithubButton from "../components/GithubButton"
+import Subheading from "../components/Subheading"
 
 
 
@@ -53,9 +56,12 @@ const Project = () => {
         <div style={{margin: "35px"}}>
 
         <ThemeProvider theme={theme}>
-            <Typography variant="h3">
-                <strong>{params.projectName}</strong>
-            </Typography>
+            <Box sx={{display: "flex", justifyContent: "space-between"}}>
+                <Typography variant="h3">
+                    <strong>{params.projectName}</strong>
+                </Typography>
+                <GithubButton url="https://github.com/KeefeVuong/discordbot"/>
+            </Box>
             <Divider/>
             <Carousel
             autoPlay={false}
@@ -67,22 +73,15 @@ const Project = () => {
                     return <img src={data} key={i}/>
                 })}
             </Carousel>
-            <Divider sx={{marginBottom: "30px"}}>
+            <Divider>
                 <Chip color="primary" label="Click here to find out more" onClick={() => {window.scrollTo(0, 500)}}/>
             </Divider>
 
-            
-            <Typography variant="h4">
-                <strong>About</strong>
-            </Typography>
-            <Divider sx={{marginBottom: "30px"}}/>
-            <Paper sx={{margin: "0px 2.5%"}}>
-                <Typography>
-                    This bot utilises Discord to perform tasks which help the user experience. Coded in Python
-                </Typography>
-            </Paper>
+            <Subheading title="About"/>
 
-            <div style={{"padding": "50px"}}/>
+            <ProjectAbout projectName={params.projectName}/>
+
+            <Subheading title="Features"/>
 
             <Box sx={{display: "flex", flexDirection:"row", justifyContent: "center", flexWrap: "wrap", gap: "15%", alignItems: "flex-start"}}>
                 <Box sx={{display: "flex", flexDirection:"column", alignItems: "center", width: "40%", minWidth: "350px", boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"}}>
