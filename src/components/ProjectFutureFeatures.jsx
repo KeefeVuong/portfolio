@@ -58,7 +58,16 @@ const projectFeatures = {
             ]
         }
     ],
-    "Hangman Game": []
+    "Hangman Game": [
+        {
+            "Improving on-screen keyboard": 
+            <Typography>
+                Hide the on-screen keyboard until the user clicks the play button.<br/>
+                Allow the user to also use their keyboard as an option of input.
+            </Typography> 
+            
+        }
+    ]
 }
 
 function ProjectFutureFeatures({projectName}) {
@@ -80,10 +89,18 @@ function ProjectFutureFeatures({projectName}) {
                     </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                    <Typography component="div" sx={{paddingBottom: "10px"}}>
-                      <strong>Usage: </strong><Chip label={Object.values(feature)[0][0]} color="error" />
-                    </Typography>
-                    {Object.values(feature)[0][1]}
+                    {
+                    projectName === "Discord Bot" &&
+                    (
+                      <>
+                      <Typography component="div" sx={{paddingBottom: "10px"}}>
+                        <strong>Usage: </strong><Chip onClick={async () => {await navigator.clipboard.writeText(Object.values(feature)[0][0]);}}label={Object.values(feature)[0][0]} color="error" />
+                      </Typography>
+                      {Object.values(feature)[0][1]}
+                      </>
+                    )
+                  }
+                  {Object.values(feature)[0]}
                     </AccordionDetails>
                 </Accordion>
           )})}

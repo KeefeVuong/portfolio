@@ -99,7 +99,52 @@ const projectFeatures = {
           ]
       }
   ],
-  "Hangman Game": []
+  "Hangman Game": [
+      {
+        "Start button": 
+        <Typography>
+          Starts the game by picking a random word and replacing all letters with an _. <br/>
+          The on-screen keyboard is then enabled shortly after.
+        </Typography>
+      },
+      {
+        "Reset button":
+        <Typography>
+          Allows the user to reset the game at any point back to the <strong>Home</strong> screen.
+        </Typography>
+      },
+      {
+        "Diverse word bank":
+        <Typography>
+          Lots of unique/difficult words to guess in Hangman.
+        </Typography>
+      },
+      {
+        "On-screen keyboard":
+        <Typography>
+          Allows the user to select letters by clicking as to improve the user experience from having to move between the keyboard and mouse constantly.
+        </Typography>
+      },
+      {
+        "Lives counter":
+        <Typography>
+          Displays the number of lives the user has, accompanied with a picture of the Hangman which increases in the number of limbs as lives decrease. 
+        </Typography>
+      },
+      {
+        "End game screen":
+        <Typography>
+          When the player wins or loses the game, a popup will appear informing them of the results.
+        </Typography>
+      },
+      {
+        "Mobile friendly":
+        <Typography>
+          Can be easily played on the mobile due to being only reliant on clicks.
+        </Typography>
+      }
+
+  ]
 }
 
 function ProjectCurrentFeatures({projectName}) {
@@ -121,10 +166,19 @@ function ProjectCurrentFeatures({projectName}) {
                   </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                  <Typography component="div" sx={{paddingBottom: "10px"}}>
-                    <strong>Usage: </strong><Chip onClick={async () => {await navigator.clipboard.writeText(Object.values(feature)[0][0]);}}label={Object.values(feature)[0][0]} color="success" />
-                  </Typography>
-                  {Object.values(feature)[0][1]}
+                  {
+                    projectName === "Discord Bot" &&
+                    (
+                      <>
+                      <Typography component="div" sx={{paddingBottom: "10px"}}>
+                        <strong>Usage: </strong><Chip onClick={async () => {await navigator.clipboard.writeText(Object.values(feature)[0][0]);}}label={Object.values(feature)[0][0]} color="success" />
+                      </Typography>
+                      {Object.values(feature)[0][1]}
+                      </>
+                    )
+                  }
+                  {Object.values(feature)[0]}
+
                   </AccordionDetails>
               </Accordion>
         )})}
