@@ -167,18 +167,16 @@ function ProjectCurrentFeatures({projectName}) {
                   </AccordionSummary>
                   <AccordionDetails>
                   {
-                    projectName === "Discord Bot" &&
-                    (
-                      <>
+                    projectName === "Discord Bot" 
+                    ?  
+                    (<>
                       <Typography component="div" sx={{paddingBottom: "10px"}}>
                         <strong>Usage: </strong><Chip onClick={async () => {await navigator.clipboard.writeText(Object.values(feature)[0][0]);}}label={Object.values(feature)[0][0]} color="success" />
                       </Typography>
                       {Object.values(feature)[0][1]}
-                      </>
-                    )
+                    </>)
+                    : <Typography>{Object.values(feature)[0]}</Typography>
                   }
-                  {Object.values(feature)[0]}
-
                   </AccordionDetails>
               </Accordion>
         )})}
