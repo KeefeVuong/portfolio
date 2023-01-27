@@ -60,12 +60,36 @@ const projectFeatures = {
     ],
     "Hangman Game": [
         {
-            "Improving on-screen keyboard": 
+            "Optimising on-screen keyboard": 
             <Typography>
                 Hide the on-screen keyboard until the user clicks the play button.<br/>
-                Allow the user to also use their keyboard as an option of input.
+                Allow the user to use keyboard inputs to make guesses.
             </Typography> 
-            
+        },
+        {
+            "UI/UX improvements":
+            <Typography>
+                Include a better usage of space within the page and less jarring colour schemes.<br/>
+                Fix the end of game modal to allow users to easily exit out.
+            </Typography>
+        },
+        {
+            "Leaderboard":
+            <Typography>
+                Shows the user the percentile they belong in based on the number of lives left for a specific word.
+            </Typography>
+        },
+        {
+            "Hints":
+            <Typography>
+                Allows players to request a hint (either the definition or a free letter).
+            </Typography>
+        },
+        {
+            "Import TXT files":
+            <Typography>
+                Allows players to import their own TXT files with words of their choice.
+            </Typography>
         }
     ]
 }

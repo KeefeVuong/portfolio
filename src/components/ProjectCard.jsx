@@ -2,9 +2,10 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Typography, Box, Rating } from '@mui/material';
+import { Typography, Box, Rating, Badge, Chip } from '@mui/material';
 import { CardActionArea } from '@mui/material';
 import { useNavigate } from "react-router-dom";
+import TerminalIcon from '@mui/icons-material/Terminal';
 
 const ProjectCard = ({title, completed, language, img, rating}) => {
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ const ProjectCard = ({title, completed, language, img, rating}) => {
     }   
 
     return (
-        <Card sx={{ width: 345, height: 290}} onClick={handleClick}>
+        <Card sx={{ width: 345, height: 290, borderRadius: "5%"}} onClick={handleClick}>
           <CardActionArea>
             <CardMedia
               component="img"
@@ -22,24 +23,19 @@ const ProjectCard = ({title, completed, language, img, rating}) => {
               image={img}
               alt="green iguana"
             />
-            <CardContent>
+            <CardContent sx={{paddingTop: "10px"}}>
               <Box sx={{display: "flex", justifyContent: "space-between"}}>
-                <Typography gutterBottom variant="h5" component="div">
-                    {title}
-                </Typography>
-                <Typography variant="subtitle2">
-                    {language}
+                <Typography gutterBottom variant="h6" sx={{marginBottom: "12px"}}>
+                  <strong>{title}</strong>
                 </Typography>
               </Box>
               <Box sx={{display: "flex", justifyContent: "space-between"}}>
-                <Rating readOnly value={rating} size="small"></Rating>
                 {completed ?  
-                <Typography variant="body2" color="text.secondary">
-                  COMPLETED
-                </Typography> : 
-                <Typography variant="body2" color="text.secondary">
-                  INCOMPLETE
-                </Typography>}
+                  <Chip label="FINISHED" size="small" color="success"/> : 
+                  <Chip label="UNFINISHED" size="small" color="error"/>}
+                <Typography variant="subtitle2">
+                    {language} 
+                </Typography>
               </Box>
             </CardContent>
           </CardActionArea>

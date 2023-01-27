@@ -10,7 +10,7 @@ const titleStyle = {
 const projectsBoxStyle = {
     display: "flex",
     justifyContent: "center",
-    border: "1px solid black",
+    // border: "1px solid black",
     marginTop: "20px",
     flexWrap: "wrap",
     gap: "20px"
