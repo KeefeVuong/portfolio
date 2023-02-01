@@ -47,7 +47,8 @@ const aboutData = {
             <strong style={{color: "red"}}>Incorrect</strong> - if the letter selected does not belong in the word, reducing the amount of lives and adding extra limbs to the hangman.
             </Typography>
         </>
-    ]
+    ],
+    "Reminders Application": []
 }
 
 function ProjectAbout({projectName}) {

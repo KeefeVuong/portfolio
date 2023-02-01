@@ -144,7 +144,8 @@ const projectFeatures = {
         </Typography>
       }
 
-  ]
+  ],
+  "Reminders Application": []
 }
 
 function ProjectCurrentFeatures({projectName}) {

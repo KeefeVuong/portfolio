@@ -91,7 +91,8 @@ const projectFeatures = {
                 Allows players to import their own TXT files with words of their choice.
             </Typography>
         }
-    ]
+    ],
+    "Reminders Application": []
 }
 
 function ProjectFutureFeatures({projectName}) {
