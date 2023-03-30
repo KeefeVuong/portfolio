@@ -18,7 +18,7 @@ const avatarStyle = {
 
 const funFacts = [
     "My top 3 hobbies would be going to the gym, playing games with friends and playing the drums",
-    "My name originated from a Chinese fortune teller who only gave my parents one vowel to use, which is also why I have 3 e's in my name -.-"
+    "My name originated from a Chinese fortune teller who only gave my parents the letters k, f and one vowel to use, which is also why I have 3 e's in my name -.-"
 ]
 
 const About = () => {
