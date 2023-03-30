@@ -35,7 +35,7 @@ const About = () => {
                     />
                     <Divider flexItem={true} sx={{marginBottom: "30px"}}/>
                 </Box>
-                <Typography variant="h5">I'm currently a <strong>second year</strong> university student studying a <strong>Bachelor of Computer Science</strong> at UNSW.</Typography>
+                <Typography variant="h5">I'm currently a <strong>third year</strong> university student studying a <strong>Bachelor of Computer Science</strong> at UNSW.</Typography>
                 <Typography variant="h5"><br/>Here are a few fun facts about myself!</Typography>
 
                 {funFacts.map((item) => {
