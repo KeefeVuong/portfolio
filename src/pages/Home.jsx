@@ -30,7 +30,7 @@ const Home = () => {
                 <Box
                 sx={backgroundStyle}
                 >
-                    <Button variant="contained" sx={titleStyle} onClick={() => navigate("/portfolio/about")}>
+                    <Button variant="contained" sx={titleStyle} onClick={() => navigate("/about")}>
                         <Typography variant="h3" component="h2">
                             HELLO THERE!
                         </Typography>

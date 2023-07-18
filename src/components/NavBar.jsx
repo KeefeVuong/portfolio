@@ -16,13 +16,13 @@ const NavBar = () => {
                 <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     Keefe Vuong
                 </Typography>
-                <Button component={Link} to="/portfolio/" color="inherit">
+                <Button component={Link} to="/" color="inherit">
                     HOME
                 </Button>
-                <Button component={Link} to="/portfolio/projects" color="inherit">
+                <Button component={Link} to="/projects" color="inherit">
                     PROJECTS
                 </Button>
-                <Button component={Link} to="/portfolio/about" color="inherit">
+                <Button component={Link} to="/about" color="inherit">
                     ABOUT ME
                 </Button>
             </Toolbar>

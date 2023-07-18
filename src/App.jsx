@@ -3,9 +3,10 @@ import reactLogo from './assets/react.svg'
 import NavBar from './components/NavBar'
 import "./App.css"
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
+  Navigate
 } from "react-router-dom";
 import Home from './pages/Home'
 import Projects from './pages/Projects'
@@ -17,13 +18,14 @@ function App() {
   return (
     <div className="App" style={{backgroundColor: "#e7ebf0", minHeight:"100vh"}}>
         <Router>
-        <NavBar/>
-        <Routes>
-          <Route path="/portfolio/" element={<Home/>}/>
-          <Route path="/portfolio/projects" element={<Projects/>}/>
-          <Route path="/portfolio/about" element={<About/>}/>
-          <Route path="/portfolio/projects/:projectName" element={<Project/>}/>
-        </Routes>
+          <NavBar/>
+          <Routes>
+            {/* <Route path="/" element={<Navigate to="/portfolio" />} /> */}
+            <Route path="/" element={<Home/>}/>
+            <Route path="projects" element={<Projects/>}/>
+            <Route path="about" element={<About/>}/>
+            <Route path="projects/:projectName" element={<Project/>}/>
+          </Routes>
         </Router>
     </div>
   )
