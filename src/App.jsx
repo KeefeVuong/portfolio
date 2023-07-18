@@ -6,7 +6,6 @@ import {
   HashRouter as Router,
   Routes,
   Route,
-  Navigate
 } from "react-router-dom";
 import Home from './pages/Home'
 import Projects from './pages/Projects'
@@ -20,7 +19,6 @@ function App() {
         <Router>
           <NavBar/>
           <Routes>
-            {/* <Route path="/" element={<Navigate to="/portfolio" />} /> */}
             <Route path="/" element={<Home/>}/>
             <Route path="projects" element={<Projects/>}/>
             <Route path="about" element={<About/>}/>
