@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography, Fade, Container, Box, Paper, Button } from '@mui/material';
 import { useNavigate } from "react-router-dom";
+import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+
 
 const titleStyle = {
     textAlign: "center",
@@ -33,7 +35,7 @@ const welcomeMessage = {
     borderRadius: "50px",
     alignItems: "center",
     textAlign: "center",
-    backgroundColor: "rgba(52, 52, 52, 0.4)",
+    backgroundColor: "rgba(125, 125, 125, 0.4)",
     color: "white",
 }
 
@@ -54,10 +56,8 @@ const Home = () => {
                             <br/>
                             Please use the navigation bar to discover more!
                         </Typography>
-                        <Button variant="contained" onClick={() => navigate("/about")}>
-                            <Typography variant="h5">
-                                Explore more about me
-                            </Typography>
+                        <Button variant="contained" size="lg" onClick={() => navigate("/about")}>
+                            Explore more about me <KeyboardArrowRight/>
                         </Button>
                     </Paper>
                 </Box> 

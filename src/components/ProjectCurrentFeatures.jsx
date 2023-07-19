@@ -153,7 +153,7 @@ function ProjectCurrentFeatures({projectName}) {
       <>
         {projectFeatures[projectName].map((feature, i) => {
             return (
-              <Accordion key={"currentPanel" + i}>
+              <Accordion key={"currentPanel" + i} disableGutters={true}>
                   <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls="panel1a-content"
@@ -166,7 +166,9 @@ function ProjectCurrentFeatures({projectName}) {
                       {Object.keys(feature)[0]}
                   </Typography>
                   </AccordionSummary>
-                  <AccordionDetails>
+                  <AccordionDetails
+                  sx={{border: "1px #f3e5f5", borderStyle: "solid hidden solid hidden"}}
+                  >
                   {
                     projectName === "Discord Bot" 
                     ?  

@@ -100,32 +100,33 @@ function ProjectFutureFeatures({projectName}) {
         <>
           {projectFeatures[projectName].map((feature, i) => {
               return (
-                <Accordion key={"futurePanel" + i}>
+                <Accordion key={"futurePanel" + i} disableGutters={true}>
                     <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                     >
-                    <ListItemIcon>
-                        <CloseIcon sx={{color: "red", border: "1px solid red", borderRadius: 100}}/>
-                    </ListItemIcon>
-                    <Typography>
-                        {Object.keys(feature)[0]}
-                    </Typography>
+                        <ListItemIcon>
+                            <CloseIcon sx={{color: "red", border: "1px solid red", borderRadius: 100}}/>
+                        </ListItemIcon>
+                        <Typography>
+                            {Object.keys(feature)[0]}
+                        </Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
-                    {
-                    projectName === "Discord Bot" &&
-                    (
-                      <>
-                      <Typography component="div" sx={{paddingBottom: "10px"}}>
-                        <strong>Usage: </strong><Chip onClick={async () => {await navigator.clipboard.writeText(Object.values(feature)[0][0]);}}label={Object.values(feature)[0][0]} color="error" />
-                      </Typography>
-                      {Object.values(feature)[0][1]}
-                      </>
-                    )
-                  }
-                  {Object.values(feature)[0]}
+                    <AccordionDetails
+                    sx={{border: "1px #f3e5f5", borderStyle: "solid hidden solid hidden"}}
+                    >
+                        {
+                            projectName === "Discord Bot" &&
+                            (
+                            <>
+                            <Typography component="div" sx={{paddingBottom: "10px"}}>
+                                <strong>Usage: </strong><Chip onClick={async () => {await navigator.clipboard.writeText(Object.values(feature)[0][0]);}}label={Object.values(feature)[0][0]} color="error" />
+                            </Typography>
+                            {Object.values(feature)[0][1]}
+                            </>
+                            )
+                        }
                     </AccordionDetails>
                 </Accordion>
           )})}

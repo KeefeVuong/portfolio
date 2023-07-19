@@ -24,13 +24,6 @@ import ProjectFutureFeatures from '../components/ProjectFutureFeatures';
 
 
 
-const theme = createTheme({
-  typography: {
-    fontFamily: [
-      'Open Sans',
-    ].join(','),
-  },});
-
 const carouselStyle = {
     textAlign: "center",
     marginTop: "5px",
@@ -54,7 +47,6 @@ const Project = () => {
         <>
         <div style={{margin: "35px"}}>
 
-        <ThemeProvider theme={theme}>
             <Box sx={{display: "flex", justifyContent: "space-between"}}>
                 <Typography variant="h3">
                     <strong>{params.projectName}</strong>
@@ -62,7 +54,7 @@ const Project = () => {
                 <GithubButton url={githubLinks[params.projectName]}/>
             </Box>
             <Divider/>
-            <Carousel
+            {/* <Carousel
             autoPlay={false}
             sx={carouselStyle}
             cycleNavigation={true}
@@ -74,7 +66,7 @@ const Project = () => {
             </Carousel>
             <Divider>
                 <Chip color="primary" label="Click here to find out more" onClick={() => {window.scrollTo(0, 500)}}/>
-            </Divider>
+            </Divider> */}
 
             <Subheading title="About"/>
 
@@ -82,12 +74,12 @@ const Project = () => {
 
             <Subheading title="Features"/>
 
-            <Box sx={{display: "flex", flexDirection:"row", justifyContent: "center", flexWrap: "wrap", gap: "15%", alignItems: "flex-start"}}>
+            <Box sx={{display: "flex", flexDirection:"row", justifyContent: "center", flexWrap: "nowrap", gap: "15%", alignItems: "flex-start"}}>
                 <Box sx={{display: "flex", flexDirection:"column", alignItems: "center", width: "40%", minWidth: "350px", boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;"}}>
                     <Typography variant="h4" sx={{padding: "20px"}}>
                         <strong>Current Features</strong>
                     </Typography>
-                    <Divider flexItem={true} variant="middle" sx={{marginBottom: "30px"}}/>
+                    <Divider flexItem={true}/>
                     <Box sx={{display: "flex", flexDirection:"column", width:"100%", justifyContent: "center"}}>
                         <ProjectCurrentFeatures projectName={params.projectName}/>
                     </Box>
@@ -97,14 +89,13 @@ const Project = () => {
                     <Typography variant="h4" sx={{padding: "20px"}}>
                         <strong>Future Features</strong>
                     </Typography>
-                    <Divider flexItem={true} variant="middle" sx={{marginBottom: "30px"}}/>
+                    <Divider flexItem={true}/>
                     <Box sx={{display: "flex", flexDirection:"column", width:"100%", justifyContent: "center"}}>
                         <ProjectFutureFeatures projectName={params.projectName}/>
                     </Box>
                 </Box>
             </Box>
 
-        </ThemeProvider>
         </div>
         </>
     )

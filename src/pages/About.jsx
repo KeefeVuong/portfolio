@@ -6,6 +6,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 
+
 const boxStyle = {
     display: "flex", 
     flexDirection: "column", 
@@ -56,7 +57,7 @@ const About = () => {
         if (currentTab === "intro") {
             return (
                 <>
-                    <Typography variant="h5">I'm currently a <strong>third year</strong> university student studying a <strong>Bachelor of Computer Science</strong> at UNSW.</Typography>
+                    <Typography variant="h5">I'm currently a <Box component="span" fontWeight="bold">third year</Box> university student studying a <Box component="span" fontWeight="bold">Bachelor of Computer Science</Box> at UNSW.</Typography>
                     <Typography variant="h5"><br/>Here are a few fun facts about myself!</Typography>
     
                     {funFacts.map((item) => {
@@ -81,7 +82,7 @@ const About = () => {
                         src={ato_logo}
                         sx={atoLogoStyle}
                         />
-                        <Typography variant="h5"><strong>APS 4 IT Application Developer</strong> @ Australian Taxation Office</Typography>
+                        <Typography variant="h5"><Box component="span" fontWeight="bold">APS 4 IT Application Developer</Box> @ Australian Taxation Office</Typography>
                     </Box>
                     <Typography variant="h5"><br/><em>Previous:</em></Typography>
     
@@ -130,9 +131,10 @@ const About = () => {
                 <Box sx={boxStyle}>
                     <Typography variant="h3">Hi! My name is Keefe</Typography>
                     <Avatar
-                    alt="Remy Sharp"
+                    alt="Profile pic"
                     src={profile}
                     sx={avatarStyle}
+                    onLoad={() => setProfilePicLoaded(true)}
                     />
                     <Box>
                         <IconButton onClick={shiftLeft} disabled={leftArrowDisabled}>
