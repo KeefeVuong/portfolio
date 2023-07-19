@@ -21,6 +21,7 @@ import GithubButton from "../components/GithubButton"
 import Subheading from "../components/Subheading"
 import ProjectCurrentFeatures from '../components/ProjectCurrentFeatures';
 import ProjectFutureFeatures from '../components/ProjectFutureFeatures';
+import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 
 
 
@@ -40,6 +41,10 @@ const githubLinks = {
     "Hangman Game": "https://github.com/KeefeVuong/hangman"
 }
 
+const playable = {
+    "Discord Bot": false,
+    "Hangman Game": "https://keefevuong.github.io/hangman/"
+}
 
 const Project = () => {
     const params = useParams();
@@ -51,7 +56,12 @@ const Project = () => {
                 <Typography variant="h3">
                     <strong>{params.projectName}</strong>
                 </Typography>
-                <GithubButton url={githubLinks[params.projectName]}/>
+                <Box>
+                    <IconButton disabled={playable[params.projectName] ? false : true} target="_blank" href={playable[params.projectName]} sx={{color: "#4CC76E"}}>
+                        <PlayCircleFilledWhiteIcon/>
+                    </IconButton>
+                    <GithubButton url={githubLinks[params.projectName]}/>
+                </Box>
             </Box>
             <Divider/>
             {/* <Carousel

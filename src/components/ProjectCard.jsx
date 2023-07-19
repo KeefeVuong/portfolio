@@ -21,7 +21,8 @@ const ProjectCard = ({title, completed, language, img, rating}) => {
               component="img"
               height="200px"
               image={img}
-              alt="green iguana"
+              alt="project thumbnail"
+              sx={{border:"1px solid", borderStyle:"hidden hidden dotted hidden"}}
             />
             <CardContent sx={{paddingTop: "10px"}}>
               <Box sx={{display: "flex", justifyContent: "space-between"}}>

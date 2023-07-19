@@ -25,7 +25,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="App" style={{backgroundColor: "#e7ebf0", minHeight:"100vh", fontFamily:"Poppins"}}>
+      <div className="App" style={{backgroundColor: "#e7ebf0", minHeight: "100vh", fontFamily:"Poppins"}}>
           <Router>
             <NavBar/>
             <Routes>
@@ -35,6 +35,7 @@ function App() {
               <Route path="projects/:projectName" element={<Project/>}/>
             </Routes>
           </Router>
+          <footer style={{display: "flex", justifyContent: "end"}}></footer>
       </div>
     </ThemeProvider>
   )
