@@ -1,6 +1,7 @@
 import { React, useState } from 'react';
 import { Typography, Paper, Container, Avatar, Divider, Box, List, ListItem, ListItemIcon, Slide, IconButton, Icon } from '@mui/material';
-import profile from "../imgs/profile.jpg"
+import acorn from "../imgs/acorn.jpeg"
+import mickey from "../imgs/mickey.jpeg"
 import ato_logo from "../imgs/ato_logo.png"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
@@ -15,8 +16,8 @@ const boxStyle = {
 }
 
 const avatarStyle = {
-    width: 250, 
-    height: 250, 
+    width: 225, 
+    height: 225, 
     margin: "20px 0px"
 }
 
@@ -129,12 +130,47 @@ const About = () => {
         <Slide in={true} direction="right" timeout={1000} mountOnEnter unmountOnExit>
             <Container maxWidth="lg" >
                 <Box sx={boxStyle}>
-                    <Typography variant="h3">Hi! My name is Keefe</Typography>
-                    <Avatar
-                    alt="Profile pic"
-                    src={profile}
-                    sx={avatarStyle}
-                    />
+                    <Typography variant="h3" marginBottom="10px">Meet my precious babies!</Typography>
+                    <Box sx={{display: "flex", gap:"20px"}}>
+                        <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                            <Avatar
+                            alt="acorn"
+                            src={acorn}
+                            sx={avatarStyle}
+                            />
+                            <Box marginLeft="30px" marginRight="30px">
+                                <Typography variant="h4" marginBottom="15px">
+                                    STATS
+                                </Typography>
+                                <Typography variant="body1">
+                                    Name: Acorn [F]<br/>
+                                    Age: 2 years old<br/>
+                                    Favourite snack: Mandarins <br/>
+                                    Favourite pastime: Eating undies<br/>
+                                
+                                </Typography>
+                            </Box>
+                        </Box>
+                        <Divider orientation="vertical" flexItem></Divider>
+                        <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                            <Avatar
+                            alt="mickey"
+                            src={mickey}
+                            sx={avatarStyle}
+                            />
+                            <Box marginLeft="30px">
+                                <Typography variant="h4" marginBottom="15px">
+                                    STATS
+                                </Typography>
+                                <Typography variant="body1">
+                                    <strong>Name:</strong> Mickey [F]<br/>
+                                    Age: 3 years old<br/>
+                                    Favourite snack: Humans <br/>
+                                    Favourite pastime: Cobbing her toys
+                                </Typography>
+                            </Box>
+                        </Box>
+                    </Box>
                     <Box>
                         <IconButton onClick={shiftLeft} disabled={leftArrowDisabled}>
                             <KeyboardDoubleArrowLeftIcon/>
