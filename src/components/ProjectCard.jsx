@@ -33,7 +33,7 @@ const ProjectCard = ({title, completed, language, img, rating}) => {
               <Box sx={{display: "flex", justifyContent: "space-between"}}>
                 {completed ?  
                   <Chip label="FINISHED" size="small" color="success"/> : 
-                  <Chip label="UNFINISHED" size="small" color="error"/>}
+                  <Chip label="IN PROGRESS" size="small" color="error"/>}
                 <Typography variant="subtitle2">
                     {language} 
                 </Typography>

@@ -48,7 +48,10 @@ const aboutData = {
             </Typography>
         </>
     ],
-    "Reminders Application": []
+    "Reminders Application": [],
+    "DVS Helper": [],
+    "Password Manager": [],
+    "Portfolio Website": []
 }
 
 function ProjectAbout({projectName}) {
