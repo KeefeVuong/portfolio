@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Fade, Container, Box, Paper, Button, Avatar } from '@mui/material';
-import profile from "../imgs/profile.jpg"
+import profile from "../imgs/profile.jpeg"
 import { useNavigate } from "react-router-dom";
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 

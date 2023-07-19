@@ -2,7 +2,7 @@ import { React, useState } from 'react';
 import { Typography, Paper, Container, Avatar, Divider, Box, List, ListItem, ListItemIcon, Slide, IconButton, Icon } from '@mui/material';
 import acorn from "../imgs/acorn.jpeg"
 import mickey from "../imgs/mickey.jpeg"
-import ato_logo from "../imgs/ato_logo.png"
+import ato_logo from "../imgs/ato_logo.jpeg"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
