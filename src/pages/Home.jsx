@@ -1,7 +1,14 @@
 import React from 'react';
-import { Typography, Fade, Container, Box, Paper, Button } from '@mui/material';
+import { Typography, Fade, Container, Box, Paper, Button, Avatar } from '@mui/material';
+import profile from "../imgs/profile.jpg"
 import { useNavigate } from "react-router-dom";
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
+
+const avatarStyle = {
+    width: 400, 
+    height: 400, 
+    margin: "20px 0px"
+}
 
 
 const titleStyle = {
@@ -16,10 +23,11 @@ const textBox = {
 
 const backgroundStyle = {
     display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
+    flexDirection: "row",
+    justifyContent: "space-around",
     alignItems: "center",
-    height: "90vh"
+    height: "88vh",
+    width: "100%"
 }
 
 const welcomeTitle = {
@@ -49,7 +57,7 @@ const Home = () => {
                 <Box
                 sx={backgroundStyle}
                 >
-                    <Paper elevation={2} sx={welcomeMessage}>
+                    {/* <Paper elevation={2} sx={welcomeMessage}>
                         <Typography variant="h2" sx={welcomeTitle}>Welcome!</Typography>
                         <Typography variant="h4" sx={textBox}>
                             This is a website I have constructed to document my coding journey. 
@@ -59,7 +67,37 @@ const Home = () => {
                         <Button variant="contained" size="lg" onClick={() => navigate("/about")}>
                             Explore more about me <KeyboardArrowRight/>
                         </Button>
-                    </Paper>
+                    </Paper> */}
+    
+                    <Box>
+                        <Typography variant="h4">
+                            &lt;&gt;
+                        </Typography>
+                        <Box marginLeft="60px">
+                            <Typography variant="h3" marginBottom="15px">
+                                Hi!<br/>
+                                I'm <Box component="span" color="#81c784">Keefe Vuong</Box>
+                            </Typography>
+                            <Typography variant="h5" marginBottom="25px">
+                                I've created this website to document my programming journey!
+                                <br/>
+                                Please use the navigation bar to discover more
+                            </Typography>
+
+                            <Button variant="contained" size="lg" onClick={() => navigate("/about")}>
+                                Explore more about me <KeyboardArrowRight/>
+                            </Button>
+                        </Box>
+                        <Typography variant="h4" marginTop="10px">
+                            &lt;&frasl;&gt;
+                        </Typography>
+                    </Box>
+
+                    <Avatar
+                    alt="Profile pic"
+                    src={profile}
+                    sx={avatarStyle}
+                    />
                 </Box> 
             </Fade>
         </Box>

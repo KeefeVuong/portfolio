@@ -134,7 +134,6 @@ const About = () => {
                     alt="Profile pic"
                     src={profile}
                     sx={avatarStyle}
-                    onLoad={() => setProfilePicLoaded(true)}
                     />
                     <Box>
                         <IconButton onClick={shiftLeft} disabled={leftArrowDisabled}>
