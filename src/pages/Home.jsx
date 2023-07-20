@@ -24,6 +24,7 @@ const textBox = {
 const backgroundStyle = {
     display: "flex",
     flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "space-around",
     alignItems: "center",
     height: "88vh",
@@ -57,18 +58,6 @@ const Home = () => {
                 <Box
                 sx={backgroundStyle}
                 >
-                    {/* <Paper elevation={2} sx={welcomeMessage}>
-                        <Typography variant="h2" sx={welcomeTitle}>Welcome!</Typography>
-                        <Typography variant="h4" sx={textBox}>
-                            This is a website I have constructed to document my coding journey. 
-                            <br/>
-                            Please use the navigation bar to discover more!
-                        </Typography>
-                        <Button variant="contained" size="lg" onClick={() => navigate("/about")}>
-                            Explore more about me <KeyboardArrowRight/>
-                        </Button>
-                    </Paper> */}
-    
                     <Box>
                         <Typography variant="h4">
                             &lt;&gt;

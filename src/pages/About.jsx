@@ -34,7 +34,8 @@ const atoLogoStyle = {
 
 const funFacts = [
     "My top 3 hobbies would be going to the gym, playing games with friends and playing the drums",
-    "My name originated from a Chinese fortune teller who only gave my parents the letters k, f and one vowel to use, which is also why I have 3 e's in my name -.-"
+    "A Chinese fortune teller gave my parents the letters k, f and one vowel to name me -.-"
+    // "My name originated from a Chinese fortune teller who only gave my parents the letters k, f and one vowel to use, which is also why I have 3 e's in my name -.-"
 ]
 
 const previousEmployment = [
@@ -131,7 +132,7 @@ const About = () => {
             <Container maxWidth="lg" >
                 <Box sx={boxStyle}>
                     <Typography variant="h3" marginBottom="10px">Meet my precious babies!</Typography>
-                    <Box sx={{display: "flex", gap:"20px"}}>
+                    <Box sx={{display: "flex", gap:"20px", flexWrap: "wrap"}}>
                         <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                             <Avatar
                             alt="acorn"
@@ -139,14 +140,14 @@ const About = () => {
                             sx={avatarStyle}
                             />
                             <Box marginLeft="30px" marginRight="30px">
-                                <Typography variant="h4" marginBottom="15px">
+                                <Typography variant="h4" marginBottom="25px">
                                     STATS
                                 </Typography>
                                 <Typography variant="body1">
-                                    Name: Acorn [F]<br/>
-                                    Age: 2 years old<br/>
-                                    Favourite snack: Mandarins <br/>
-                                    Favourite pastime: Eating undies<br/>
+                                    <strong>Name:</strong> Acorn [F]<br/>
+                                    <strong>Age:</strong> 2 years old<br/>
+                                    <strong>Favourite snack:</strong> Mandarins <br/>
+                                    <strong>Favourite pastime:</strong> Eating undies<br/>
                                 
                                 </Typography>
                             </Box>
@@ -159,14 +160,14 @@ const About = () => {
                             sx={avatarStyle}
                             />
                             <Box marginLeft="30px">
-                                <Typography variant="h4" marginBottom="15px">
+                                <Typography variant="h4" marginBottom="25px">
                                     STATS
                                 </Typography>
                                 <Typography variant="body1">
                                     <strong>Name:</strong> Mickey [F]<br/>
-                                    Age: 3 years old<br/>
-                                    Favourite snack: Humans <br/>
-                                    Favourite pastime: Cobbing her toys
+                                    <strong>Age:</strong> 3 years old<br/>
+                                    <strong>Favourite snack:</strong> Humans <br/>
+                                    <strong>Favourite pastime:</strong> Cobbing toys
                                 </Typography>
                             </Box>
                         </Box>
