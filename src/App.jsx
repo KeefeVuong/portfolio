@@ -35,7 +35,8 @@ function App() {
               <Route path="projects/:projectName" element={<Project/>}/>
             </Routes>
           </Router>
-          <footer style={{display: "flex", justifyContent: "end"}}></footer>
+          <footer style={{display: "flex", justifyContent: "end"}}>
+          </footer>
       </div>
     </ThemeProvider>
   )

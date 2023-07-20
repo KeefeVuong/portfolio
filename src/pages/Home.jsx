@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 
 const avatarStyle = {
-    width: 400, 
-    height: 400, 
+    width: 350, 
+    height: 350, 
     margin: "20px 0px"
 }
 

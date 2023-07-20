@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import ProjectCard from "../components/ProjectCard"
-import { Typography, Box, Tabs, Tab } from "@mui/material"
+import { Typography, Box, Tabs, Tab, Grow } from "@mui/material"
 import Carousel from 'react-material-ui-carousel'
 
 const titleStyle = {
@@ -86,22 +86,26 @@ const Projects = () => {
             </Tabs>
         </Box>
         <Box sx={projectsBoxStyle}>
-            {projects.map((project, index) => {
-                if (currentTab === 2 && !project.completed || currentTab === 1 && project.completed) {
-                    return
-                }
+                {projects.map((project, index) => {
+                    if (currentTab === 2 && !project.completed || currentTab === 1 && project.completed) {
+                        return
+                    }
 
-                return (
-                    <ProjectCard
-                    title={project.title}
-                    completed={project.completed}
-                    language={project.language}
-                    img={project.img}
-                    key={index}
-                    rating={project.rating}
-                    />
-                )
-            })}
+                    return (
+                        <Grow in={true}>
+                            <div>
+                                <ProjectCard
+                                title={project.title}
+                                completed={project.completed}
+                                language={project.language}
+                                img={project.img}
+                                key={index}
+                                rating={project.rating}
+                                />
+                            </div>
+                        </Grow>
+                    )
+                })}
         </Box>
 
 {/* 

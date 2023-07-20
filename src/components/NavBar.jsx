@@ -12,19 +12,21 @@ const NavBar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position="static">
-            <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                    Keefe Vuong
+            <Toolbar sx={{display: "flex", justifyContent: "space-between"}}>
+                <Typography variant="h6" component="div">
+                    Portfolio
                 </Typography>
-                <Button component={Link} to="/" color="inherit">
-                    HOME
-                </Button>
-                <Button component={Link} to="/projects" color="inherit">
-                    PROJECTS
-                </Button>
-                <Button component={Link} to="/about" color="inherit">
-                    ABOUT ME
-                </Button>
+                <Box>
+                    <Button component={Link} to="/" color="inherit">
+                        HOME
+                    </Button>
+                    <Button component={Link} to="/projects" color="inherit">
+                        PROJECTS
+                    </Button>
+                    <Button component={Link} to="/about" color="inherit">
+                        ABOUT
+                    </Button>
+                </Box>
             </Toolbar>
           </AppBar>
         </Box>

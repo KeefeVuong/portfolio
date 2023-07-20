@@ -11,7 +11,7 @@ import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrow
 const boxStyle = {
     display: "flex", 
     flexDirection: "column", 
-    marginTop: "15px",
+    marginTop: "20px",
     alignItems: "center"
 }
 
@@ -152,7 +152,7 @@ const About = () => {
                                 </Typography>
                             </Box>
                         </Box>
-                        <Divider orientation="vertical" flexItem></Divider>
+                        {/* <Divider orientation="vertical" flexItem></Divider> */}
                         <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                             <Avatar
                             alt="mickey"

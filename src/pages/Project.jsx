@@ -50,11 +50,11 @@ const Project = () => {
             <Box sx={{display: "flex", justifyContent: "space-between"}}>
                 <Typography variant="h3">
                     <strong>{params.projectName}</strong>
-                </Typography>
-                <Box>
                     <IconButton disabled={playable[params.projectName] ? false : true} target="_blank" href={playable[params.projectName]} sx={{color: "#4CC76E"}}>
                         <PlayCircleFilledWhiteIcon/>
                     </IconButton>
+                </Typography>
+                <Box>
                     <GithubButton url={githubLinks[params.projectName]}/>
                 </Box>
             </Box>
