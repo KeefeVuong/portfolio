@@ -37,7 +37,7 @@ const githubLinks = {
 }
 
 const playable = {
-    "Discord Bot": false,
+    "Discord Bot": "",
     "Hangman Game": "https://keefevuong.github.io/hangman/"
 }
 

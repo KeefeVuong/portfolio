@@ -112,9 +112,9 @@ function ProjectFutureFeatures({projectName}) {
                         <ListItemIcon>
                             <CloseIcon sx={{color: "red", border: "1px solid red", borderRadius: 100}}/>
                         </ListItemIcon>
-                        <Typography>
+                        <Box>
                             {Object.keys(feature)[0]}
-                        </Typography>
+                        </Box>
                     </AccordionSummary>
                     <AccordionDetails
                     sx={{border: "1px #f3e5f5", borderStyle: "solid hidden solid hidden"}}
