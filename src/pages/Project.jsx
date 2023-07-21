@@ -23,8 +23,6 @@ import ProjectCurrentFeatures from '../components/ProjectCurrentFeatures';
 import ProjectFutureFeatures from '../components/ProjectFutureFeatures';
 import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 
-
-
 const carouselStyle = {
     textAlign: "center",
     marginTop: "5px",
@@ -59,19 +57,6 @@ const Project = () => {
                 </Box>
             </Box>
             <Divider/>
-            {/* <Carousel
-            autoPlay={false}
-            sx={carouselStyle}
-            cycleNavigation={true}
-            navButtonsAlwaysVisible={true}
-            >
-                {testData.map((data, i) => {
-                    return <img src={data} key={i}/>
-                })}
-            </Carousel>
-            <Divider>
-                <Chip color="primary" label="Click here to find out more" onClick={() => {window.scrollTo(0, 500)}}/>
-            </Divider> */}
 
             <Subheading title="About"/>
 
