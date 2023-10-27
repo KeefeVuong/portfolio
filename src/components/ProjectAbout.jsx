@@ -59,7 +59,7 @@ function ProjectAbout({projectName}) {
 
   return (
     <Paper sx={{margin: "0px 4%", borderRadius: "15px"}}>
-    {aboutData[projectName].map((data, i) => {
+    {aboutData[projectName] === undefined ? null : aboutData[projectName].map((data, i) => {
         return (
             <div key={"projectAbout" + i} style={{margin: "5px"}}>{data}</div>
         )

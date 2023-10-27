@@ -154,7 +154,7 @@ const projectFeatures = {
 function ProjectCurrentFeatures({projectName}) {
     return (
       <>
-        {projectFeatures[projectName].map((feature, i) => {
+        {projectFeatures[projectName] === undefined ? null : projectFeatures[projectName].map((feature, i) => {
             return (
               <Accordion key={"currentPanel" + i} disableGutters={true}>
                   <AccordionSummary
