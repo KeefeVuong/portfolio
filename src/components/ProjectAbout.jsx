@@ -51,7 +51,8 @@ const aboutData = {
     "Reminders Application": [],
     "DVS Helper": [],
     "Password Manager": [],
-    "Portfolio Website": []
+    "Portfolio Website": [],
+    "Tiktok Stats Dashboard": [],
 }
 
 function ProjectAbout({projectName}) {

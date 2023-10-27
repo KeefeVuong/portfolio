@@ -23,7 +23,7 @@ const avatarStyle = {
 
 const currentEmploymentBox = {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
 }
 
 const atoLogoStyle = {
@@ -34,8 +34,7 @@ const atoLogoStyle = {
 
 const funFacts = [
     "My top 3 hobbies would be going to the gym, playing games with friends and playing the drums",
-    "A Chinese fortune teller gave my parents the letters k, f and one vowel to name me -.-"
-    // "My name originated from a Chinese fortune teller who only gave my parents the letters k, f and one vowel to use, which is also why I have 3 e's in my name -.-"
+    "A Chinese fortune teller gave my parents the letters k, f and one vowel to name me -.-",   
 ]
 
 const previousEmployment = [
@@ -78,13 +77,21 @@ const About = () => {
         else if (currentTab === "experience") {
             return (
                 <>
+                    <Typography variant="h5"><em>Current:</em></Typography>
                     <Box sx={currentEmploymentBox}>
-                        <Avatar
-                        alt="Remy Sharp"
-                        src={ato_logo}
-                        sx={atoLogoStyle}
-                        />
-                        <Typography variant="h5"><Box component="span" fontWeight="bold">APS 4 IT Application Developer</Box> @ Australian Taxation Office</Typography>
+                        <List>
+                            <ListItem>
+                            <ListItemIcon>
+                                <ChevronRightIcon/>
+                            </ListItemIcon>
+                                <Avatar
+                                alt="Remy Sharp"
+                                src={ato_logo}
+                                sx={atoLogoStyle}
+                                />
+                                <Typography variant="h5"><Box component="span" fontWeight="bold">APS 4 IT Application Developer</Box> @ Australian Taxation Office</Typography>
+                            </ListItem>
+                        </List>
                     </Box>
                     <Typography variant="h5"><br/><em>Previous:</em></Typography>
     
@@ -131,7 +138,7 @@ const About = () => {
         <Slide in={true} direction="right" timeout={1000} mountOnEnter unmountOnExit>
             <Container maxWidth="lg" >
                 <Box sx={boxStyle}>
-                    <Typography variant="h3" marginBottom="10px">Meet my precious babies!</Typography>
+                    <Typography variant="h3" marginBottom="50px">Meet my precious babies!</Typography>
                     <Box sx={{display: "flex", gap:"20px", flexWrap: "wrap"}}>
                         <Box sx={{display: "flex", justifyContent: "center", alignItems: "center"}}>
                             <Avatar
@@ -141,7 +148,7 @@ const About = () => {
                             />
                             <Box marginLeft="30px" marginRight="30px">
                                 <Typography variant="h4" marginBottom="25px">
-                                    STATS
+                                    <b>STATS</b>
                                 </Typography>
                                 <Typography variant="body1">
                                     <strong>Name:</strong> Acorn [F]<br/>
@@ -161,12 +168,12 @@ const About = () => {
                             />
                             <Box marginLeft="30px">
                                 <Typography variant="h4" marginBottom="25px">
-                                    STATS
+                                    <b>STATS</b>
                                 </Typography>
                                 <Typography variant="body1">
                                     <strong>Name:</strong> Mickey [F]<br/>
                                     <strong>Age:</strong> 3 years old<br/>
-                                    <strong>Favourite snack:</strong> Humans <br/>
+                                    <strong>Favourite snack:</strong> Bones <br/>
                                     <strong>Favourite pastime:</strong> Cobbing toys
                                 </Typography>
                             </Box>
